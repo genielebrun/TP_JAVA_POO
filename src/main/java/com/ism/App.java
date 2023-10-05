@@ -264,7 +264,6 @@ public class App {
                            case 2://Modification Article Confection
                                articleConfectionServiceImpl.getAll().forEach(System.out::println);
                                do {
-                                   //ESSAIE SUR
                                    System.out.println("Entrez l'ID de l'article à modifier : ");
                                    idArtMod = scanner.nextInt();
                                    scanner.nextLine();
