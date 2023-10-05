@@ -233,11 +233,11 @@ public class App {
 
                 case 4: //Modification du libelle
                     do {
-                        System.out.println("\n########################");
+                        System.out.println("\n###############################");
                         System.out.println("1-Modifier categorie");
                         System.out.println("2-Modifier article confection");
                         System.out.println("3-Quitter");
-                        System.out.println("########################\nEntrez votre choix : ");
+                        System.out.println("###############################\nEntrez votre choix : ");
                         modCatArt = scanner.nextInt();
                         scanner.nextLine();
                         switch (modCatArt) {
