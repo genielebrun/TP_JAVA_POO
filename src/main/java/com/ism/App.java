@@ -132,7 +132,7 @@ public class App {
                                 categorieServiceImpl.getAll().forEach(System.out::println);
                                 break;
                             case 2:
-                                System.out.println("\n### LISTE UNITE :###");
+                                System.out.println("\n### LISTE UNITES :###");
                                 uniteServiceImpl.getAll().forEach(System.out::println);
                                 break;
                             case 3:
@@ -214,7 +214,7 @@ public class App {
                                     System.out.println("Entrez l'ID de l'article de confection à supprimer : ");
                                     idArtSup = scanner.nextInt();
                                     if (articleConfectionServiceImpl.show(idArtSup) != null) {
-                                        System.out.println("L'élément à supprimer est : " + articleConfectionServiceImpl.show(idArtSup) /*repository.findByID(idArtSup)*/);
+                                        System.out.println("L'élément à supprimer est : " + articleConfectionServiceImpl.show(idArtSup));
                                         articleConfectionServiceImpl.remove(idArtSup);
                                         System.out.println("Suppression effectuée avec succès !!!");
                                         System.out.println("\n######## ARTICLES APRES SUPPRESSION : ########\n");
@@ -247,11 +247,13 @@ public class App {
                                     idCatMod = scanner.nextInt();
                                     scanner.nextLine();
                                     if (categorieServiceImpl.show(idCatMod) != null) {
-                                        System.out.println("L'élément à modifier est : " + categorieServiceImpl.show(idCatMod)/*repository.findByID(idCatMod)*/);
+                                        System.out.println("L'élément à modifier est : " + categorieServiceImpl.show(idCatMod));
                                         System.out.println("Entrez le nouveau libelle : ");
                                         Categorie categorieMod = new Categorie(idCatMod, scanner.nextLine());
                                         categorieServiceImpl.update(categorieMod);
                                         System.out.println("Modification effectuée avec succès !!!\n");
+                                        System.out.println("######## CATEGORIES APRES MODIFICATION: ########");
+                                        categorieServiceImpl.getAll().forEach(System.out::println);
                                         break;
                                     } else {
                                         System.out.println("ID Introuvable !!!");
